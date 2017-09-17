@@ -9,7 +9,7 @@ import java.io.*;
 /**
  * Created by zhangyubo02 on 2017/9/2.
  */
-public class TestSerialize {
+public class SerializeDemo {
 
     private Person person;
     private String filePath = "Person.out";

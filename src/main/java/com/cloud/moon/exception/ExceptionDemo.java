@@ -7,7 +7,7 @@ import static javafx.scene.input.KeyCode.T;
 /**
  * Created by zhangyubo02 on 2017/8/29.
  */
-public class TestException {
+public class ExceptionDemo {
 
     @Test
     public void test1(){
