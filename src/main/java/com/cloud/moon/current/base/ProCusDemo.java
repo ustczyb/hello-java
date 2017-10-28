@@ -1,7 +1,8 @@
-package com.cloud.moon.current;
+package com.cloud.moon.current.base;
 
 /**
  * Created by zhangyubo02 on 2017/9/28.
+ * 生产者消费者Demo
  */
 public class ProCusDemo {
     public static void main(String[] args) {

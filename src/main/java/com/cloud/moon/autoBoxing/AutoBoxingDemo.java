@@ -5,8 +5,10 @@ package com.cloud.moon.autoBoxing;
  */
 public class AutoBoxingDemo {
     public static void main(String[] args) {
-        Integer integer = null;
-        boolean flag = integer == 0;
-        System.out.println(flag);
+//        Integer integer = null;
+//        boolean flag = integer == 0;
+//        System.out.println(flag);
+
+        System.out.println(Math.toIntExact(199));
     }
 }

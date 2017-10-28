@@ -9,7 +9,9 @@ import java.util.Date;
 import java.util.Locale;
 
 /**
- * Created by zhangyubo02 on 2017/9/16.
+ *
+ * @author zhangyubo02
+ * @date 2017/9/16
  * java的日期时间处理api
  */
 public class DateDemo {
@@ -39,8 +41,11 @@ public class DateDemo {
      */
     @Test
     public void testDateFormat() throws ParseException {
+        String s = "Oct 17 2017:12:25:00";
+        DateFormat dateFormat = new SimpleDateFormat("MMM dd yyyy:HH:mm:ss");
+        System.out.println(dateFormat.parse(s));
         //字符串转日期
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
+        dateFormat = new SimpleDateFormat("yyyy-M-dd hh:mm:ss");
         String dateString = "2014-11-23 12:23:34";
         Date date = dateFormat.parse(dateString);
         System.out.println(date);
