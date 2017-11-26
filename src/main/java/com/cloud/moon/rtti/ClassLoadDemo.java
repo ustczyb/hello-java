@@ -10,7 +10,7 @@ public class ClassLoadDemo {
         System.out.println("main() run");
         new A();
         System.out.println("after A created");
-        Class.forName("B");
+        Class.forName("com.cloud.moon.rtti.B");
         System.out.println("after B forName");
     }
 }
