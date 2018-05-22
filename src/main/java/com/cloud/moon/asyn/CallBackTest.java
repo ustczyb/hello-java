@@ -8,6 +8,8 @@ public class CallBackTest {
         Server server = new Server();
         Client client = new Client(server);
 
-        client.sendMsg("Server,Hello~");
+        for (int i = 0; i < 5; i++) {
+            client.sendMsg("Server,Hello~");
+        }
     }
 }
