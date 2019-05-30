@@ -3,9 +3,10 @@ package com.cloud.moon.java8.stream;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.*;
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
@@ -87,7 +88,7 @@ public class StreamDemo {
     public void testReduce() {
         Optional<String> str = stringList.stream()
                 .sorted()
-                .reduce((s1,s2) -> (s1 + "#" + s2));
+                .reduce((s1, s2) -> (s1 + "#" + s2));
         str.ifPresent(s -> System.out.println(s));
     }
 
@@ -97,6 +98,18 @@ public class StreamDemo {
                 .sorted()
                 .collect(Collectors.toList());
         System.out.println(list);
+    }
+
+    /**
+     * 使用flatmap将多个stream合并成一个
+     */
+    @Test
+    public void testFlatMap() {
+        List<List<Integer>> listList = Arrays.asList(Arrays.asList(1, 2, 3), Arrays.asList(11, 22, 33), Arrays.asList(12, 23, 31), Arrays.asList(13, 21, 32));
+        List<Integer> integers = listList.stream()
+                .flatMap(List::stream)
+                .collect(Collectors.toList());
+        System.out.println(integers);
     }
 
 }

@@ -2,8 +2,6 @@ package com.cloud.moon.exception;
 
 import org.junit.Test;
 
-import static javafx.scene.input.KeyCode.T;
-
 /**
  * Created by zhangyubo02 on 2017/8/29.
  */
@@ -36,5 +34,15 @@ public class ExceptionDemo {
             arr[3] = 0;
             System.out.println("finally run");
         }
+    }
+
+    public static void main(String[] args) {
+        int i = 0;
+        try {
+            i = 5 / (5 - 5);
+        } finally {
+            System.out.println("finally");
+        }
+        System.out.println(i);
     }
 }
